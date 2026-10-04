@@ -1,0 +1,72 @@
+NOMBRE DEL ESTUDIANTE
+Edwin Aguilar
+
+TÍTULO DEL CASO
+Análisis del tiempo de atención de clientes en una farmacia de barrio
+
+1. FORMULACIÓN DEL PROBLEMA
+Se selecciona como sistema de estudio una farmacia de barrio con atención de clientes en caja. El propósito es analizar 30 observaciones de tiempos entre llegadas y tiempos de servicio, calcular estadísticos básicos y detectar valores atípicos mediante Z-Score, para obtener una descripción preliminar del comportamiento del sistema.
+
+2. VARIABLE PRINCIPAL
+Variable principal: tiempo de servicio en caja, medido en minutos.
+Variable complementaria: tiempo entre llegadas de clientes, medido en minutos.
+
+3. SUPUESTOS
+- El sistema corresponde a una situación simulada de atención en farmacia.
+- Se analizan 30 clientes.
+- Los tiempos están expresados en minutos.
+- Cada fila representa una observación independiente.
+- Se utiliza Z-Score para detectar valores atípicos.
+- Se considera outlier fuerte cuando |Z| > 3.
+
+4. ESTADÍSTICOS DESCRIPTIVOS
+
+TIEMPO ENTRE LLEGADAS
+Media: 5.9533 min
+Mediana: 5.3800 min
+Desviación estándar: 4.7023 min
+Mínimo: 0.11 min
+Máximo: 18.56 min
+Observaciones: 30
+
+TIEMPO DE SERVICIO
+Media: 5.1077 min
+Mediana: 4.0850 min
+Desviación estándar: 4.2628 min
+Mínimo: 0.02 min
+Máximo: 13.86 min
+Observaciones: 30
+
+5. VALORES ATÍPICOS (OUTLIERS) DETECTADOS CON Z-SCORE
+Fórmula:
+Z = (x - media) / desviación estándar
+
+Criterio:
+|Z| > 3 = outlier fuerte.
+
+Tiempo entre llegadas:
+No se detectaron valores con |Z| > 3.
+
+Tiempo de servicio:
+No se detectaron valores con |Z| > 3.
+
+6. ANÁLISIS DESCRIPTIVO DE LA VARIABLE
+El tiempo de servicio presenta una media de 5.11 minutos y una mediana de 4.08 minutos. Sus observaciones se encuentran entre 0.02 y 13.86 minutos, mostrando variabilidad en la duración de la atención.
+
+El tiempo entre llegadas presenta una media de 5.95 minutos y valores entre 0.11 y 18.56 minutos. Esto representa variación en los intervalos con los que llegan los clientes al sistema.
+
+7. INTERPRETACIÓN TÉCNICA
+Los datos muestran que la atención no tiene una duración constante y que los clientes tampoco llegan con intervalos idénticos. Esta variabilidad es relevante porque, en un sistema de atención, puede producir periodos de mayor demanda y aumentar los tiempos de espera.
+
+El Z-Score permite identificar observaciones extremas respecto al comportamiento promedio de cada variable. Los resultados obtenidos corresponden específicamente a la muestra simulada de 30 observaciones.
+
+8. CONCLUSIÓN
+A partir de los 30 datos analizados se logró formular y describir preliminarmente un sistema de atención en una farmacia. La variable principal, tiempo de servicio, presentó una media de 5.11 minutos, mientras que el tiempo entre llegadas tuvo una media de 5.95 minutos.
+
+El análisis estadístico permitió conocer la tendencia central y la variabilidad de los datos, además de identificar los valores que cumplen el criterio de outlier fuerte mediante Z-Score. Por tanto, el procedimiento proporciona una base cuantitativa para continuar con un estudio de simulación o análisis de colas del sistema.
+
+ARCHIVOS
+datos/datos.csv
+scripts/analisis.py
+reporte/informe.txt
+README.md
